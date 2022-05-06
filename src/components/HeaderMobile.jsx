@@ -1,20 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
+import HeaderMenu from './HeaderMenu'
 
 import {AiFillGithub } from 'react-icons/ai'
 import {BsBell} from 'react-icons/bs'
 import {GiHamburgerMenu} from 'react-icons/gi'
 
 
-function HeaderMenu() {
+function HeaderMobile() {
+
+  const [showMenu, setShowMenu] = useState(false)
+
   return (
     <div className='header__mobile-main'>
 
         <div className='header__mobile'>
 
             <div className="header__item">
-                <button>
+                <button className='header__hamburger header-link' onClick={() => setShowMenu(!showMenu)}>
                 <GiHamburgerMenu/>
-                </button>
+                </button >
             </div>
 
             <div className="header__item flex-auto mobile-logo">
@@ -31,9 +35,9 @@ function HeaderMenu() {
         </div>
 
         </div>
-
+        {/* {showMenu && <HeaderMenu />} */}
     </div>
   )
 }
 
-export default HeaderMenu
+export default HeaderMobile

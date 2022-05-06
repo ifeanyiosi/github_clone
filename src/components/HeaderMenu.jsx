@@ -1,7 +1,10 @@
 import React from 'react'
 import './header.scss'
 
-function Header() {
+function HeaderMenu() {
+
+    
+
   return (
     
     <>
@@ -80,4 +83,4 @@ function Header() {
   )
 }
 
-export default Header
+export default HeaderMenu
