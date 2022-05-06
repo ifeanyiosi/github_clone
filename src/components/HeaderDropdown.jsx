@@ -1,4 +1,5 @@
 import React from 'react'
+import './HeaderDropdown.scss'
 
 import {MdArrowDropDown} from 'react-icons/md'
 
@@ -9,6 +10,8 @@ function HeaderDropdown() {
      <div className='signin'>
 
      <div className='username__container'>
+
+       Signed in as <strong className="username__header">username</strong>
 
      </div>
 
