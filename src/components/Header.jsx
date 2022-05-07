@@ -14,7 +14,7 @@ function Header({ avatarUrl }) {
       <div className="header-desktop">
         <div className="header-item github-icon">
           <div className="header-link">
-            <AiFillGithub className='svg'/>
+            <AiFillGithub className='svg git' />
           </div>
         </div>
         <div className="header-item flex-auto">
