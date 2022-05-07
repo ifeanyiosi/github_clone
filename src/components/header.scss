@@ -2,29 +2,29 @@
     padding: 16px;
     font-size: 14px;
     line-height: 1.5;
-    background-color: #fff;
+    background-color:#24292e;
   }
-
-  .header__desktop,
-  .header__mobile {
+  
+  .header-desktop,
+  .header-mobile {
     display: flex;
     align-items: center;
   }
-
-  .header__item {
+  
+  .header-item {
     margin-right: 16px;
     align-self: stretch;
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
   }
-
-  .github__icon {
+  
+  .github-icon {
     margin-bottom: -4px;
     margin-top: -4px;
     margin-left: 16px;
   }
-
+  
   .header-link {
     font-weight: 600;
     color: white;
@@ -33,29 +33,33 @@
     cursor: pointer;
     display: inline;
   }
-
-   .header-link:focus,
+  
+  .header-link:focus,
   .header-link:hover {
     color: hsla(0, 0%, 100%, 0.7);
   }
-
-   .header-link:focus .svg,
+  
+  .header-link:focus .svg,
   .header-link:hover .svg {
     fill: hsla(0, 0%, 100%, 0.7);
   }
-
-   .header-link > .svg {
+  
+  .header-link > .svg {
     fill: white;
     margin-bottom: -4px;
     height: 100%;
   }
-
+  
+  .flex-auto {
+    flex: auto;
+  }
+  
   .header-search {
     display: flex;
     align-items: center;
   }
-
-  .header__form {
+  
+  .header-form {
     display: flex;
     color: white;
     background-color: #24292e;
@@ -66,8 +70,8 @@
     margin-right: 16px;
     width: 272px;
   }
-
-  .header__form > input {
+  
+  .header-form > input {
     min-height: 28px;
     width: 100%;
     color: inherit;
@@ -80,40 +84,35 @@
     outline-width: 0;
     font-family: inherit;
   }
-
-  .header__form > input::placeholder {
+  
+  .header-form > input::placeholder {
     font-size: 14px;
     color: #c9d1d9;
   }
-
+  
   .header-search-key-slash {
     margin-right: -4px;
   }
-
-  .header-search-key-slash {
-    margin-right: -4px;
-  }
-
-  .header__nav .header-link {
+  
+  .header-nav .header-link {
     margin-right: 10px;
   }
-
-  .header__nav .header-link:nth-child(1) {
+  .header-nav .header-link:nth-child(1) {
     padding: 0 3px;
   }
-
+  
   .profile-icon,
   .notification-icon,
   .plus-icon {
     cursor: pointer;
   }
-
+  
   .notification-indicator {
     display: flex;
     align-items: center;
     position: relative;
   }
-
+  
   .notification-indicator span {
     position: absolute;
     height: 10px;
@@ -123,7 +122,7 @@
     top: -6px;
     background-color: #157cf2;
   }
-
+  
   .notification-indicator svg {
     fill: white;
   }
@@ -137,7 +136,7 @@
     white-space: nowrap;
     text-decoration: none;
   }
-
+  
   .profile-icon img {
     border-radius: 50%;
     margin-right: 5px;
@@ -146,3 +145,108 @@
   .profile-icon:hover, .profile-icon:focus {
     color: hsla(0, 0%, 100%, 0.7);
   }
+  
+  /* MOBILE HEADER STYLES */
+  
+  .header-mobile-main {
+    display: none;
+  }
+  
+  .header-hamburger {
+    display: inline-block;
+    padding: 0;
+    font-size: inherit;
+    cursor: pointer;
+    background-color: initial;
+    border: 0;
+    outline-width: 0;
+  }
+  
+  .mobile-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .header-mobile .notification-icon {
+    margin-right: 0;
+  }
+  
+  .mobile-header-search {
+    display: flex;
+    flex-direction: column;
+    margin: 16px 0;
+    align-items: stretch;
+  }
+  
+  .mobile-header-form {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  
+ 
+  .mobile-nav-items.show {
+    display: block;
+  }
+  
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 10px 0;
+    margin-bottom: 0;
+  }
+  
+  .nav-mobile {
+    padding: 8px 0;
+    border-top: 1px solid hsla(0, 0%, 100%, 0.15);
+  }
+  
+  .nav-mobile-profile {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-mobile-profile img {
+    border-radius: 50%;
+    margin-right: 4px;
+  }
+  
+  .sign-out {
+    width: 100%;
+    display: block !important;
+    text-align: left;
+    border: none;
+    border-top: 1px solid hsla(0, 0%, 100%, 0.15);
+    background-color: inherit;
+    font-family: inherit;
+  }
+  
+  .mobile-nav-items .header-search {
+    margin-bottom: 0;
+  }
+
+  /* MEDIA QUERIES */
+
+@media only screen and (max-width: 1012px) {
+  .header-link .hide {
+    display: none;
+  }
+
+}
+
+@media only screen and (max-width: 788px) {
+  
+  .header-desktop {
+    display: none;
+  }
+
+  .header-mobile-main {
+    display: block;
+  }
+
+  .header-nav .header-link:nth-child(1) {
+    padding: 8px 0;
+  }
+
+} 
