@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import HeaderMenu from './HeaderMenu'
+import './header.scss'
 
 import {AiFillGithub } from 'react-icons/ai'
 import {BsBell} from 'react-icons/bs'
@@ -17,13 +18,13 @@ function HeaderMobile() {
 
             <div className="header__item">
                 <button className='header__hamburger header-link' onClick={() => setShowMenu(!showMenu)}>
-                <GiHamburgerMenu/>
+                <GiHamburgerMenu className='svg'/>
                 </button >
             </div>
 
             <div className="header__item flex-auto mobile-logo">
           <div className="header-link">
-            <AiFillGithub/>
+            <AiFillGithub className='svg'/>
           </div>
         </div>
 
@@ -35,7 +36,7 @@ function HeaderMobile() {
         </div>
 
         </div>
-        {/* {showMenu && <HeaderMenu />} */}
+        {showMenu && <HeaderMenu />}
     </div>
   )
 }

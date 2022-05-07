@@ -1,9 +1,20 @@
 import React from 'react'
 import './HeaderDropdown.scss'
 
+import { connect } from 'react-redux';
 import {MdArrowDropDown} from 'react-icons/md'
+import { signOut } from '../redux/actions'
+import { useNavigate } from 'react-router-dom';
 
-function HeaderDropdown() {
+function HeaderDropdown({signOut, username}) {
+
+  const navigate = useNavigate();
+  const handleClick = () => {
+    // auth.signOut();
+    signOut();
+    navigate.push('/');
+  };
+
   return (
     <div className='header__dropdown'>
 
@@ -56,7 +67,7 @@ function HeaderDropdown() {
       <div className="dropdown__item">Help</div>
       <div className="dropdown__item">Settings</div>
 
-       <button className="dropdown__item dropdown__signout">
+       <button onClick={handleClick} className="dropdown__item dropdown__signout">
         Sign out
       </button>
 
@@ -64,4 +75,12 @@ function HeaderDropdown() {
   )
 }
 
-export default HeaderDropdown
+const mapStateToProps = ({ data }) => ({
+  username: data ? data.login : '',
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  signOut: () => dispatch(signOut()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(HeaderDropdown);

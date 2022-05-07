@@ -52,3 +52,97 @@
     font-weight: 600;
     padding-left: 4px;
 }
+
+.dropdown__divider {
+    display: block;
+    margin: 8px 0;
+    height: 0;
+    border-top: 1px solid #e1e4e8;
+}
+
+.status__container {
+    word-break: break-word;
+    white-space: normal;
+    line-height: 1.25;
+    font-size: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.status__inner {
+    border-radius: 6px;
+    padding: 4px 8px;
+    margin-top: 8px;
+    border: 1px solid #e1e4e8;
+}
+
+.status__details {
+    display: flex;
+}
+
+.emoji__container {
+    display: flex;
+    line-height: 1.25;
+    font-size: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: bottom;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown__svg {
+    vertical-align: text-bottom;
+    display: inline-block;
+    fill: #586069;
+}
+
+.message__wrapper {
+    line-height: 20px;
+    font-size: 12px;
+    white-space: nowrap;
+    max-width: 100%;
+}
+
+.text__gray {
+    color:#586069;
+}
+
+.dropdown__item {
+    display: block;
+    padding: 4px 8px 4px 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-decoration: none;
+    background-color: initial;
+    color: inherit;
+    font-weight: normal;
+}
+
+.dropdown__item:hover {
+    text-decoration: none;
+    outline: none;
+    background-color: #0366d6;
+    color: #fff;
+}
+
+.dropdown__signout {
+    border: 0;
+    background: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.status-details:hover .text-gray {
+    color: #0366d6;
+}
+
+.status-details:hover .dropdown-svg {
+    fill: #0366d6;
+}

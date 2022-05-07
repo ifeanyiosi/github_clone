@@ -1,0 +1,148 @@
+.header {
+    padding: 16px;
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: #fff;
+  }
+
+  .header__desktop,
+  .header__mobile {
+    display: flex;
+    align-items: center;
+  }
+
+  .header__item {
+    margin-right: 16px;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .github__icon {
+    margin-bottom: -4px;
+    margin-top: -4px;
+    margin-left: 16px;
+  }
+
+  .header-link {
+    font-weight: 600;
+    color: white;
+    white-space: nowrap;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline;
+  }
+
+   .header-link:focus,
+  .header-link:hover {
+    color: hsla(0, 0%, 100%, 0.7);
+  }
+
+   .header-link:focus .svg,
+  .header-link:hover .svg {
+    fill: hsla(0, 0%, 100%, 0.7);
+  }
+
+   .header-link > .svg {
+    fill: white;
+    margin-bottom: -4px;
+    height: 100%;
+  }
+
+  .header-search {
+    display: flex;
+    align-items: center;
+  }
+
+  .header__form {
+    display: flex;
+    color: white;
+    background-color: #24292e;
+    border: 1px solid #444d56;
+    font-weight: 400;
+    padding: 0px 12px;
+    border-radius: 6px;
+    margin-right: 16px;
+    width: 272px;
+  }
+
+  .header__form > input {
+    min-height: 28px;
+    width: 100%;
+    color: inherit;
+    background: none;
+    background-color: inherit;
+    width: 100%;
+    border: 0;
+    padding: 0;
+    line-height: 20px;
+    outline-width: 0;
+    font-family: inherit;
+  }
+
+  .header__form > input::placeholder {
+    font-size: 14px;
+    color: #c9d1d9;
+  }
+
+  .header-search-key-slash {
+    margin-right: -4px;
+  }
+
+  .header-search-key-slash {
+    margin-right: -4px;
+  }
+
+  .header__nav .header-link {
+    margin-right: 10px;
+  }
+
+  .header__nav .header-link:nth-child(1) {
+    padding: 0 3px;
+  }
+
+  .profile-icon,
+  .notification-icon,
+  .plus-icon {
+    cursor: pointer;
+  }
+
+  .notification-indicator {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .notification-indicator span {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    right: -2px;
+    top: -6px;
+    background-color: #157cf2;
+  }
+
+  .notification-indicator svg {
+    fill: white;
+  }
+  
+  .profile-icon {
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-weight: 600;
+    color: white;
+    white-space: nowrap;
+    text-decoration: none;
+  }
+
+  .profile-icon img {
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+
+  .profile-icon:hover, .profile-icon:focus {
+    color: hsla(0, 0%, 100%, 0.7);
+  }
